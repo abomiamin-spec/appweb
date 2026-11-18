@@ -1,0 +1,42 @@
+[
+  {
+    "app": "demo-notes",
+    "version": "1.2.0",
+    "date": "2026-11-10",
+    "type": "feature",
+    "notes": {
+      "ar": "تغييرات تجريبية",
+      "en": "Demo changes"
+    }
+  },
+  {
+    "app": "demo-notes",
+    "version": "1.0.0",
+    "date": "2026-09-01",
+    "type": "release",
+    "notes": {
+      "ar": "الإصدار الأول",
+      "en": "First release"
+    }
+  },
+  {
+    "app": "demo-tools",
+    "version": "0.9.1",
+    "date": "2026-11-02",
+    "type": "fix",
+    "notes": {
+      "ar": "إصلاحات تجريبية",
+      "en": "Demo fixes"
+    }
+  },
+  {
+    "app": "demo-design",
+    "version": "2.0.0",
+    "date": "2026-11-12",
+    "type": "release",
+    "notes": {
+      "ar": "إصدار تجريبي",
+      "en": "Demo release"
+    }
+  }
+]

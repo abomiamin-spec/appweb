@@ -1,0 +1,27 @@
+[
+  {
+    "id": "productivity",
+    "ar": "الإنتاجية",
+    "en": "Productivity"
+  },
+  {
+    "id": "tools",
+    "ar": "الأدوات",
+    "en": "Tools"
+  },
+  {
+    "id": "design",
+    "ar": "التصميم",
+    "en": "Design"
+  },
+  {
+    "id": "education",
+    "ar": "التعليم",
+    "en": "Education"
+  },
+  {
+    "id": "media",
+    "ar": "الوسائط",
+    "en": "Media"
+  }
+]

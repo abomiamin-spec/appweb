@@ -1,0 +1,10 @@
+name = "yj-store-admin"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+[vars]
+GITHUB_CLIENT_ID = "REPLACE_ME"
+ADMIN_GITHUB_LOGIN = "abomiamin-spec"
+REPO = "abomiamin-spec/appweb"
+BRANCH = "main"
+SITE_PATH = "/appweb/"
+SITE_ORIGIN = "https://abomiamin-spec.github.io"
