@@ -44,7 +44,11 @@ export function Provider({ children }) {
 }
 export const platsOf = (a) => Object.keys(a.platforms).filter((k) => a.platforms[k].enabled);
 const PN = { android: "Android", windows: "Windows", web: "Web" };
-export const Icon = ({ app, cls = "" }) => { const { L } = useApp(); return <div className={`ic ${cls}`} aria-hidden="true">{(L(app.name).trim()[0] || "?").toUpperCase()}</div>; };
+export const Icon = ({ app, cls = "" }) => {
+  const { L } = useApp();
+  if (app.icon) return <div className={`ic has-img ${cls}`}><img src={`${base}${app.icon}`} alt={L(app.name)} loading="lazy" /></div>;
+  return <div className={`ic ${cls}`} aria-hidden="true">{(L(app.name).trim()[0] || "?").toUpperCase()}</div>;
+};
 export const PlatTags = ({ app }) => platsOf(app).map((p) => <span key={p} className="tag">{PN[p]}</span>);
 export function Downloads({ app }) {
   const { t } = useApp();

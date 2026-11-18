@@ -18,17 +18,19 @@
     "size": "78.8 MB",
     "requirements": {
       "ar": [
-        "Windows 10 أو أحدث"
+        "Windows 10 أو أحدث",
+        "Android 11 أو أحدث"
       ],
       "en": [
-        "Windows 10 or later"
+        "Windows 10 or later",
+        "Android 11 or later"
       ]
     },
     "platforms": {
       "android": {
-        "enabled": false,
-        "downloadUrl": "",
-        "fileSize": ""
+        "enabled": true,
+        "downloadUrl": "https://github.com/abomiamin-spec/appweb/releases/download/sean2.0/sean2.0.APK",
+        "fileSize": "9.43 MB"
       },
       "windows": {
         "enabled": true,
@@ -50,6 +52,7 @@
           "en": "First release"
         }
       }
-    ]
+    ],
+    "icon": "assets/apps/sen-free/icon.png"
   }
 ]
