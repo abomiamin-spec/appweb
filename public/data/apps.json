@@ -1,92 +1,27 @@
 [
   {
-    "slug": "demo-notes",
+    "slug": "sen-free",
     "name": {
-      "ar": "تطبيق تجريبي ١",
-      "en": "Demo App 1"
+      "ar": "سين - النسخة المجانية",
+      "en": "Sen - Free Version"
     },
     "description": {
-      "ar": "بيانات Demo لاختبار التصميم. احذفها وأضف تطبيقاتك الحقيقية.",
-      "en": "Demo data for testing the design. Delete it and add your real apps."
+      "ar": "تطبيق سين مخصص لكتابة الأسئلة الامتحانية بأدوات بسيطة وعملية.",
+      "en": "Sen is an app for writing exam questions with simple, practical tools."
     },
     "category": "productivity",
-    "version": "1.2.0",
-    "releaseDate": "2026-09-01",
-    "updatedAt": "2026-11-10",
+    "version": "2.0.0",
+    "releaseDate": "2026-11-18",
+    "updatedAt": "2026-11-18",
     "featured": true,
     "published": true,
-    "size": "12 MB",
+    "size": "78.8 MB",
     "requirements": {
       "ar": [
-        "Android 8 أو أحدث",
         "Windows 10 أو أحدث"
       ],
       "en": [
-        "Android 8+",
-        "Windows 10+"
-      ]
-    },
-    "platforms": {
-      "android": {
-        "enabled": true,
-        "downloadUrl": "",
-        "fileSize": "12 MB"
-      },
-      "windows": {
-        "enabled": true,
-        "downloadUrl": "",
-        "fileSize": "28 MB"
-      },
-      "web": {
-        "enabled": false,
-        "url": ""
-      }
-    },
-    "changelog": [
-      {
-        "version": "1.2.0",
-        "date": "2026-11-10",
-        "type": "feature",
-        "notes": {
-          "ar": "تغييرات تجريبية",
-          "en": "Demo changes"
-        }
-      },
-      {
-        "version": "1.0.0",
-        "date": "2026-09-01",
-        "type": "release",
-        "notes": {
-          "ar": "الإصدار الأول",
-          "en": "First release"
-        }
-      }
-    ],
-    "demo": true
-  },
-  {
-    "slug": "demo-tools",
-    "name": {
-      "ar": "تطبيق تجريبي ٢",
-      "en": "Demo App 2"
-    },
-    "description": {
-      "ar": "بيانات Demo: أداة ويب تعمل من المتصفح.",
-      "en": "Demo data: a web tool that runs in the browser."
-    },
-    "category": "tools",
-    "version": "0.9.1",
-    "releaseDate": "2026-10-05",
-    "updatedAt": "2026-11-02",
-    "featured": false,
-    "published": true,
-    "size": "",
-    "requirements": {
-      "ar": [
-        "متصفح حديث"
-      ],
-      "en": [
-        "Modern browser"
+        "Windows 10 or later"
       ]
     },
     "platforms": {
@@ -96,63 +31,9 @@
         "fileSize": ""
       },
       "windows": {
-        "enabled": false,
-        "downloadUrl": "",
-        "fileSize": ""
-      },
-      "web": {
         "enabled": true,
-        "url": ""
-      }
-    },
-    "changelog": [
-      {
-        "version": "0.9.1",
-        "date": "2026-11-02",
-        "type": "fix",
-        "notes": {
-          "ar": "إصلاحات تجريبية",
-          "en": "Demo fixes"
-        }
-      }
-    ],
-    "demo": true
-  },
-  {
-    "slug": "demo-design",
-    "name": {
-      "ar": "تطبيق تجريبي ٣",
-      "en": "Demo App 3"
-    },
-    "description": {
-      "ar": "بيانات Demo: تطبيق أندرويد للتصميم.",
-      "en": "Demo data: an Android design app."
-    },
-    "category": "design",
-    "version": "2.0.0",
-    "releaseDate": "2026-11-12",
-    "updatedAt": "2026-11-12",
-    "featured": false,
-    "published": true,
-    "size": "20 MB",
-    "requirements": {
-      "ar": [
-        "Android 9 أو أحدث"
-      ],
-      "en": [
-        "Android 9+"
-      ]
-    },
-    "platforms": {
-      "android": {
-        "enabled": true,
-        "downloadUrl": "",
-        "fileSize": "20 MB"
-      },
-      "windows": {
-        "enabled": false,
-        "downloadUrl": "",
-        "fileSize": ""
+        "downloadUrl": "https://github.com/abomiamin-spec/appweb/releases/download/sean2.0/Seen-Setup-1.4.0.exe",
+        "fileSize": "78.8 MB"
       },
       "web": {
         "enabled": false,
@@ -162,14 +43,13 @@
     "changelog": [
       {
         "version": "2.0.0",
-        "date": "2026-11-12",
+        "date": "2026-11-18",
         "type": "release",
         "notes": {
-          "ar": "إصدار تجريبي",
-          "en": "Demo release"
+          "ar": "الإصدار الأول",
+          "en": "First release"
         }
       }
-    ],
-    "demo": true
+    ]
   }
 ]
