@@ -1,11 +1,62 @@
 {
   "about": {
-    "ar": "مطور تطبيقات وأدوات رقمية، يهتم ببناء حلول تقنية عملية وتجارب استخدام بسيطة وعصرية.",
-    "en": "A developer of apps and digital tools, focused on practical solutions and simple, modern user experiences."
+    "ar": "مصمم وهاوٍ للبرمجة، أشارككم تطبيقات وبرامج أصممها وأطورها بشغف.",
+    "en": "A designer and programming enthusiast sharing apps and software I design and build with passion."
   },
-  "vision": {
-    "ar": "أن تكون التقنية بسيطة وسريعة وفي متناول الجميع.",
-    "en": "Technology that is simple, fast, and within everyone's reach."
+  "welcome": {
+    "ar": "مرحباً بكم في متجري التقني!",
+    "en": "Welcome to my tech store!"
   },
-  "github": ""
+  "bio": {
+    "ar": [
+      "أنا ياسر جابر، مصمم وهاوٍ للبرمجة، أشارككم من خلال هذا المتجر مجموعة من التطبيقات والبرامج التي أعمل على تصميمها وتطويرها بشغف، وأسعى دائماً إلى تقديم تجارب رقمية مفيدة ومميزة.",
+      "يسعدني ويشرّفني دائماً التعامل معكم، وأرحب بآرائكم واقتراحاتكم واستفساراتكم."
+    ],
+    "en": [
+      "I'm Yaser Jaber, a designer and programming enthusiast. Through this store I share a collection of apps and software that I design and develop with passion, always aiming to deliver useful and distinctive digital experiences.",
+      "It is always a pleasure and an honor to deal with you, and I welcome your opinions, suggestions, and questions."
+    ]
+  },
+  "contactTitle": {
+    "ar": "تواصلوا معي عبر منصات التواصل الاجتماعي",
+    "en": "Get in touch through social media"
+  },
+  "social": [
+    {
+      "name": {
+        "ar": "إنستغرام",
+        "en": "Instagram"
+      },
+      "handle": "@24ciq",
+      "url": "https://www.instagram.com/24ciq"
+    },
+    {
+      "name": {
+        "ar": "تيك توك",
+        "en": "TikTok"
+      },
+      "handle": "@24ciq",
+      "url": "https://www.tiktok.com/@24ciq"
+    },
+    {
+      "name": {
+        "ar": "قناة واتساب",
+        "en": "WhatsApp Channel"
+      },
+      "handle": "",
+      "url": "https://whatsapp.com/channel/0029Vb93tU2LNSa6o2bLI53p"
+    },
+    {
+      "name": {
+        "ar": "تيليجرام",
+        "en": "Telegram"
+      },
+      "handle": "@yassir_jabeer",
+      "url": "https://t.me/yassir_jabeer"
+    }
+  ],
+  "thanks": {
+    "ar": "شكراً لثقتكم ودعمكم، وتشرفت بزيارتكم لمتجري. ❤️",
+    "en": "Thank you for your trust and support, and thank you for visiting my store. ❤️"
+  }
 }

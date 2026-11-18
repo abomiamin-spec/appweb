@@ -94,14 +94,23 @@ export function Updates() {
   );
 }
 export function About() {
-  const { t, L, data } = useApp();
-  const g = data.settings.github;
+  const { t, L, lang, data } = useApp();
+  const st = data.settings;
+  const bio = (st.bio && (st.bio[lang] || st.bio.ar)) || [];
+  const links = (st.social || []).filter((x) => /^https:\/\//.test(x.url));
   return (
     <section><AboutBox />
-      <div className="grid" style={{ marginTop: 16 }}>
-        <div className="glass card"><h3>{t("vis")}</h3><p>{L(data.settings.vision)}</p></div>
-        <div className="glass card"><h3>{t("contact")}</h3><p>{g ? <a href={g} rel="noopener noreferrer">GitHub</a> : "GitHub: —"}</p></div>
+      <div className="glass" style={{ padding: 28, marginTop: 16 }}>
+        <h2 style={{ marginBottom: 12 }}>{L(st.welcome)}</h2>
+        {bio.map((p, i) => <p key={i} style={{ margin: "0 0 12px" }}>{p}</p>)}
       </div>
+      {links.length > 0 && (
+        <div className="glass" style={{ padding: 28, marginTop: 16 }}>
+          <h2 style={{ marginBottom: 14 }}>{L(st.contactTitle)}</h2>
+          <div className="chips">{links.map((x) => <a key={x.url} className="btn g" href={x.url} target="_blank" rel="noopener noreferrer">{L(x.name)}{x.handle && <span className="muted" dir="ltr">{x.handle}</span>}</a>)}</div>
+        </div>
+      )}
+      {st.thanks && <p className="muted" style={{ textAlign: "center", marginTop: 24, fontSize: 16 }}>{L(st.thanks)}</p>}
     </section>
   );
 }
