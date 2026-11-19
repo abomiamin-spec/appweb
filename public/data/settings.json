@@ -23,6 +23,7 @@
   },
   "social": [
     {
+      "id": "instagram",
       "name": {
         "ar": "إنستغرام",
         "en": "Instagram"
@@ -31,6 +32,7 @@
       "url": "https://www.instagram.com/24ciq"
     },
     {
+      "id": "tiktok",
       "name": {
         "ar": "تيك توك",
         "en": "TikTok"
@@ -39,20 +41,31 @@
       "url": "https://www.tiktok.com/@24ciq"
     },
     {
+      "id": "youtube",
       "name": {
-        "ar": "قناة واتساب",
-        "en": "WhatsApp Channel"
+        "ar": "يوتيوب",
+        "en": "YouTube"
       },
-      "handle": "",
-      "url": "https://whatsapp.com/channel/0029Vb93tU2LNSa6o2bLI53p"
+      "handle": "@24ciq",
+      "url": "https://youtube.com/@24ciq?si=0ze0Ip42rf6Xf23b"
     },
     {
+      "id": "telegram",
       "name": {
         "ar": "تيليجرام",
         "en": "Telegram"
       },
       "handle": "@yassir_jabeer",
       "url": "https://t.me/yassir_jabeer"
+    },
+    {
+      "id": "whatsapp",
+      "name": {
+        "ar": "قناة واتساب",
+        "en": "WhatsApp Channel"
+      },
+      "handle": "",
+      "url": "https://whatsapp.com/channel/0029Vb93tU2LNSa6o2bLI53p"
     }
   ],
   "thanks": {

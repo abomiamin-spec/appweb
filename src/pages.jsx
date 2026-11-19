@@ -5,12 +5,36 @@ import { useApp, Icon, PlatTags, Downloads, AppCard } from "./lib.jsx";
 const published = (d) => d.apps.filter((a) => a.published);
 const byDate = (list, k) => [...list].sort((a, b) => b[k].localeCompare(a[k]));
 
-export function AboutBox() {
+export function Social({ labels }) {
+  const { L, data } = useApp();
+  const links = (data.settings.social || []).filter((x) => /^https:\/\//.test(x.url));
+  if (!links.length) return null;
+  const base = import.meta.env.BASE_URL;
+  return (
+    <div className={`soc ${labels ? "lbl" : ""}`}>
+      {links.map((x) => {
+        const m = `url("${base}assets/social/${x.id}.png")`;
+        return (
+          <a key={x.url} href={x.url} target="_blank" rel="noopener noreferrer" aria-label={L(x.name)} title={L(x.name)}>
+            {x.id ? <span className="si" style={{ WebkitMaskImage: m, maskImage: m }} /> : <span>{L(x.name)}</span>}
+            {labels && x.id && <span>{L(x.name)}{x.handle && <span className="muted" dir="ltr"> {x.handle}</span>}</span>}
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+export function AboutBox({ home }) {
   const { t, L, data } = useApp();
+  const img = <img className="portrait" src={`${import.meta.env.BASE_URL}logo.jpg`} alt={t("name")} loading="lazy" />;
   return (
     <div className="glass about">
-      <img className="portrait" src={`${import.meta.env.BASE_URL}logo.jpg`} alt={t("name")} loading="lazy" />
-      <div><h2 style={{ marginBottom: 6 }}>{t("name")}</h2><p className="muted" style={{ fontSize: 16, margin: 0 }}>{L(data.settings.about)}</p></div>
+      {home ? <Link to="/about" className="pl" aria-label={t("about")} title={t("about")}>{img}</Link> : img}
+      <div>
+        <h2 style={{ marginBottom: 6 }}>{t("name")}</h2>
+        <p className="muted" style={{ fontSize: 16, margin: 0 }}>{L(data.settings.about)}</p>
+        {home && <Social />}
+      </div>
     </div>
   );
 }
@@ -36,7 +60,7 @@ export function Home() {
       <section><h2>{t("cats")}</h2><div className="chips">{data.categories.map((c) => <Link key={c.id} className="chip" to={`/apps?cat=${c.id}`}>{L(c)}</Link>)}</div></section>
       <section><h2>{t("latest")}</h2><div className="grid">{byDate(ps, "releaseDate").slice(0, 3).map((a) => <AppCard key={a.slug} app={a} />)}</div></section>
       <section><h2>{t("recent")}</h2><div className="grid">{byDate(ps, "updatedAt").slice(0, 3).map((a) => <AppCard key={a.slug} app={a} />)}</div></section>
-      <section><AboutBox /></section>
+      <section><AboutBox home /></section>
     </>
   );
 }
@@ -94,22 +118,19 @@ export function Updates() {
   );
 }
 export function About() {
-  const { t, L, lang, data } = useApp();
+  const { L, lang, data } = useApp();
   const st = data.settings;
   const bio = (st.bio && (st.bio[lang] || st.bio.ar)) || [];
-  const links = (st.social || []).filter((x) => /^https:\/\//.test(x.url));
   return (
     <section><AboutBox />
       <div className="glass" style={{ padding: 28, marginTop: 16 }}>
         <h2 style={{ marginBottom: 12 }}>{L(st.welcome)}</h2>
         {bio.map((p, i) => <p key={i} style={{ margin: "0 0 12px" }}>{p}</p>)}
       </div>
-      {links.length > 0 && (
-        <div className="glass" style={{ padding: 28, marginTop: 16 }}>
-          <h2 style={{ marginBottom: 14 }}>{L(st.contactTitle)}</h2>
-          <div className="chips">{links.map((x) => <a key={x.url} className="btn g" href={x.url} target="_blank" rel="noopener noreferrer">{L(x.name)}{x.handle && <span className="muted" dir="ltr">{x.handle}</span>}</a>)}</div>
-        </div>
-      )}
+      <div className="glass" style={{ padding: 28, marginTop: 16 }}>
+        <h2 style={{ marginBottom: 14 }}>{L(st.contactTitle)}</h2>
+        <Social labels />
+      </div>
       {st.thanks && <p className="muted" style={{ textAlign: "center", marginTop: 24, fontSize: 16 }}>{L(st.thanks)}</p>}
     </section>
   );
