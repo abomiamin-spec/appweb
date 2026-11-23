@@ -1,14 +1,18 @@
-import { lazy, Suspense, useState } from "react";
-import { NavLink, Link, Route, Routes } from "react-router-dom";
+import { lazy, Suspense, useRef, useState } from "react";
+import { NavLink, Link, Route, Routes, useLocation } from "react-router-dom";
 import { Sun, Moon, Menu, Languages } from "lucide-react";
 import { useApp } from "./lib.jsx";
+import { useMotion } from "./motion.js";
 import { Home, Apps, Detail, Updates, About, NotFound } from "./pages.jsx";
 const Admin = lazy(() => import("./Admin.jsx"));
 
 export default function App() {
   const { t, data, reload, toggleLang, toggleTheme, isDark, toast } = useApp();
   const [open, setOpen] = useState(false);
-  const logo = `${import.meta.env.BASE_URL}logo.jpg`;
+  const mainRef = useRef(null);
+  const { pathname } = useLocation();
+  useMotion(mainRef, pathname, data.status === "ok");
+  const logo = `${import.meta.env.BASE_URL}logo.png`;
   return (
     <>
       <header><div className="bar glass">
@@ -20,7 +24,7 @@ export default function App() {
         <button className="ib" onClick={toggleTheme} aria-label="Theme">{isDark ? <Sun size={14} /> : <Moon size={14} />}</button>
         <button className="ib menu" onClick={() => setOpen(!open)} aria-label="Menu"><Menu size={14} /></button>
       </div></header>
-      <main className="wrap">
+      <main className="wrap" ref={mainRef}>
         {data.status === "loading" && <div className="grid" style={{ marginTop: 60 }}>{[0, 1, 2].map((i) => <div key={i} className="sk" />)}</div>}
         {data.status === "error" && <div className="glass empty err" style={{ marginTop: 60 }}>{t("err")}<br /><button className="btn" style={{ marginTop: 12 }} onClick={reload}>{t("retry")}</button></div>}
         {data.status === "ok" && (
