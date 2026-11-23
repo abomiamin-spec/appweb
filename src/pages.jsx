@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { LOGO } from "./logo.js";
 import { useApp, Icon, PlatTags, Downloads, AppCard } from "./lib.jsx";
 
 const published = (d) => d.apps.filter((a) => a.published);
@@ -26,7 +27,7 @@ export function Social({ labels }) {
 }
 export function AboutBox({ home }) {
   const { t, L, data } = useApp();
-  const img = <img className="portrait" src={`${import.meta.env.BASE_URL}logo.jpg`} alt={t("name")} loading="lazy" />;
+  const img = <img className="portrait" src={LOGO} alt={t("name")} loading="lazy" />;
   return (
     <div className="glass about">
       {home ? <Link to="/about" className="pl" aria-label={t("about")} title={t("about")}>{img}</Link> : img}

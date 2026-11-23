@@ -3,6 +3,7 @@ import { NavLink, Link, Route, Routes, useLocation } from "react-router-dom";
 import { Sun, Moon, Menu, Languages } from "lucide-react";
 import { useApp } from "./lib.jsx";
 import { useMotion } from "./motion.js";
+import { LOGO } from "./logo.js";
 import { Home, Apps, Detail, Updates, About, NotFound } from "./pages.jsx";
 const Admin = lazy(() => import("./Admin.jsx"));
 
@@ -12,7 +13,7 @@ export default function App() {
   const mainRef = useRef(null);
   const { pathname } = useLocation();
   useMotion(mainRef, pathname, data.status === "ok");
-  const logo = `${import.meta.env.BASE_URL}logo.png`;
+  const logo = LOGO;
   return (
     <>
       <header><div className="bar glass">
